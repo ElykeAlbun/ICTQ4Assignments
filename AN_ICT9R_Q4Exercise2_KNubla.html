@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn JavaScript</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F7DF1E;
+			color: #333;
+		}
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		p {
+			font-size: 24px;
+			margin: 20px 0;
+			line-height: 1.5;
+		}
+		.alert {
+			font-size: 24px;
+			font-weight: bold;
+			background-color: #ffcc00;
+			padding: 10px;
+			margin-top: 30px;
+			border-radius: 10px;
+			text-align: center;
+		}
+		.btn {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 24px;
+			margin-top: 50px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Learn JavaScript!</h1>
+	<img src="JS.png" alt="JavaScript" width="400">
+	<p>JavaScript is a programming language that allows web developers to add dynamic and interactive elements to their websites. It's used to create things like dropdown menus, image sliders, and form validation.</p>
+	<p>Here are some key things to know about JavaScript:</p>
+	<ul>
+		<li>JavaScript is a client-side language, meaning it's run by the user's web browser, not the server.</li>
+		<li>JavaScript is an object-oriented language, which means it organizes code into reusable objects.</li>
+		<li>JavaScript is a popular language for web development, with many frameworks and libraries available to make coding easier.</li>
+	</ul>
+	<script>
+		document.write('<p>One way to output JavaScript on a webpage is with document.write. This method can be used to write HTML elements, as well as text and variables.</p>');
+	</script>
+	<div id="output"></div>
+	<button class="btn" onclick="addOutput()">Add InnerHTML output</button>
+	<script>
+		function addOutput() {
+			document.getElementById("output").innerHTML = '<p>Another way to output JavaScript on a webpage is with InnerHTML. This method is used to add or change the content of an HTML element.</p>';
+		}
+	</script>
+	<button class="btn" onclick="showAlert()">Show Alert output</button>
+	<script>
+		function showAlert() {
+			window.alert('The third way to output JavaScript on a webpage is with Window alert. This method creates a pop-up alert box with a message.');
+		}
+	</script>
+	<div class="alert">Try clicking the buttons above to see the different output types!</div>
+</body>
+</html>
