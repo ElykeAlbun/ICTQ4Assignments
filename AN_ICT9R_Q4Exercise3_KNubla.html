@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      #output-table td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Javascript Arithmetic Operators</h1>
+      <table class="table table-bordered" id="output-table">
+        <tr>
+          <th>Operation</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>Sum(A + B)</td>
+          <td id="p1"></td>
+        </tr>
+        <tr>
+          <td>Difference(A - B)</td>
+          <td id="p2"></td>
+        </tr>
+        <tr>
+          <td>Product(A * B)</td>
+          <td id="p3"></td>
+        </tr>
+        <tr>
+          <td>Quotient(A / B)</td>
+          <td id="p4"></td>
+        </tr>
+        <tr>
+          <td>Modulus(A % B)</td>
+          <td id="p5"></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var A = 10;
+      var B = 5;
+      
+      var sum = A + B;
+      var difference = A - B;
+      var product = A * B;
+      var quotient = A / B;
+      var modulus = A % B;
+      
+      document.getElementById("p1").innerHTML = sum;
+      document.getElementById("p2").innerHTML = difference;
+      document.getElementById("p3").innerHTML = product;
+      document.getElementById("p4").innerHTML = quotient;
+      document.getElementById("p5").innerHTML = modulus;
+    </script>
+  </body>
+</html>
