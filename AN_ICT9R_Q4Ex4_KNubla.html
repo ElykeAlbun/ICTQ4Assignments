@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 4</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+		body {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+
+</head>
+<body >
+	<div class="container mt-4">
+		<h1 class="text-center mb-4">Measurement Converter</h1>
+		<div class="form-group">
+			<label for="value">Value:</label>
+			<input type="number" class="form-control" id="value">
+		</div>
+		<div class="form-group">
+			<label for="unit1">From:</label>
+			<select class="form-control" id="unit1">
+				<option value="m">Meter(M)</option>
+				<option value="cm">Centimeter(CM)</option>
+				<option value="km">Kilometer(KM)</option>
+				<option value="in">Inch(In)</option>
+				<option value="ft">Foot(Ft)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="unit2">To:</label>
+			<select class="form-control" id="unit2">
+				<option value="m">Meter(M)</option>
+				<option value="cm">Centimeter(CM)</option>
+				<option value="km">Kilometer(KM)</option>
+				<option value="in">Inch(In)</option>
+				<option value="ft">Foot(Ft)</option>
+			</select>
+		</div>
+		<button type="button" 
+			class="btn btn-success" onclick="Calculate()">Convert</button>
+		<div class="form-group">
+			<label for="result">Result:</label>
+				<input type="text" class="form-control" id="result" readonly>
+		</div>
+	</div>
+
+	<script type="text/javascript"></script>
+
+	<script>
+		function Calculate() {
+			var value = document.getElementById("value").value;
+			var unit1 = document.getElementById("unit1").value;
+			var unit2 = document.getElementById("unit2").value;
+
+			if (unit1 === "cm") {
+				value /= 100;
+			} else if (unit1 === "km") {
+				value *= 1000;
+			} else if (unit1 === "in") {
+				value /= 39.37;
+			} else if (unit1 === "ft") {
+				value /= 3.281;
+			}
+
+			if (unit2 === "m") {
+			} else if (unit2 === "cm") {
+				value *= 100;
+			} else if (unit2 === "km") {
+				value /= 1000;
+			} else if (unit2 === "in") {
+				value *= 39.37;
+			} else if (unit2 === "ft") {
+				value *= 3.281;
+			}
+
+			document.getElementById("result").value = value.toFixed(2) + " " + unit2;
+		}
+	</script>
+</body>
+</html>
